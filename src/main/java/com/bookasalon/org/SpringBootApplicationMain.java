@@ -20,6 +20,7 @@ public class SpringBootApplicationMain {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/login").allowedOrigins("http://localhost:3000");
 				registry.addMapping("/register").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/");
 			}
 		};
 	}

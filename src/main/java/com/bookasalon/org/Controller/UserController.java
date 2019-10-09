@@ -17,7 +17,10 @@ public class UserController {
         System.out.println("u r here" +email+password);
         return  new ResponseEntity<>(services.searchUser(email,password), HttpStatus.OK);
     }
-
+    @RequestMapping("/")
+    public String home(){
+        return("index");
+    }
     @CrossOrigin(origins = "http://localhost:3000/", allowedHeaders = "*")
     @RequestMapping(value="/register",method = {RequestMethod.GET})
     public ResponseEntity registerUser(@RequestParam(name="user", required = true) String user, @RequestParam(name="email", required=true) String email, @RequestParam(name="password",required = true) String password){
