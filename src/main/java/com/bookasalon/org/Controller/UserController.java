@@ -23,9 +23,9 @@ public class UserController {
     }
     @CrossOrigin(origins = "http://localhost:3000/", allowedHeaders = "*")
     @RequestMapping(value="/register",method = {RequestMethod.GET})
-    public ResponseEntity registerUser(@RequestParam(name="user", required = true) String user, @RequestParam(name="email", required=true) String email, @RequestParam(name="password",required = true) String password){
-        System.out.println("registered" +email+password+user);
-        return  new ResponseEntity<>(services.registerUser(user,email,password), HttpStatus.CREATED);
+    public ResponseEntity registerUser(@RequestParam(name="userName", required = true) String userName, @RequestParam(name="email", required=true) String email, @RequestParam(name="password",required = true) String password){
+        System.out.println("registered" +email+password+userName);
+        return  new ResponseEntity<>(services.registerUser(userName,email,password), HttpStatus.CREATED);
     }
 
 }

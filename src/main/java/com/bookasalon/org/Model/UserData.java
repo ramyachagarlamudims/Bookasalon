@@ -3,15 +3,15 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name="user")
-public class User {
+@Table(name="userdata")
+public class UserData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
-    @Column(name = "user")
-    private String user;
+    @Column(name = "username")
+    private String userName;
 
     @Column(name = "email")
     private String email;
@@ -55,12 +55,12 @@ public class User {
         this.email = email;
     }
 
-    public String getUser() {
-        return user;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
 
