@@ -1,11 +1,12 @@
 package com.bookasalon.org;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import static org.springframework.boot.SpringApplication.*;
+import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication
 public class SpringBootApplicationMain {
@@ -18,8 +19,8 @@ public class SpringBootApplicationMain {
 		return new WebMvcConfigurerAdapter() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/login").allowedOrigins("http://localhost:3000");
-				registry.addMapping("/register").allowedOrigins("http://localhost:3000");
+                registry.addMapping("/login");
+                registry.addMapping("/register");
 				registry.addMapping("/");
 			}
 		};
