@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    <script src="webjars/jquery/1.11.1/jquery.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"-->
+<!--            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>-->
+<!--    <script src="webjars/bootstrap/3.4.1/css/bootstrap.min.css"  rel="stylesheet"></script>-->
+<!--    <script src="webjars/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Book A Salon Home Page</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<nav align="right">
+    <a href="/register">SignUp</a>
+    <a href="/login">SignIn</a>
+    <a href="/appointment">BookAppointment</a>
+</nav>
+<div id="searchform">
+    <form>
+        <input type="text" id="location" name="location" value="Enter Your Location" size="50">
+        <input type="button" id="search" name="searchsalon" value="Search Near Salons">
+    </form>
+</div>
+<div class="subtitle">Why Wait in Queue Book Appointment Here</div>
+<div id="demo" align="center" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/images2.jpeg" class="slide-images" alt="Mirrors">
+        </div>
+        <div class="carousel-item">
+            <img src="images/images1.jpeg" class="slide-images" alt="Pony Salon">
+        </div>
+        <div class="carousel-item">
+            <img src="images/images.jpeg" class="slide-images" alt="Cocoonus" >
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div class="popular-subtitle">Book Popular Services</div>
+<div class="row popular-block">
+    <div class="popular"> <p align="center">Hair Cut/Styling</p> <a target="_blank" href="/appointment"><img  class="popular-img" src="images/Haircut.jpg" alt="Hair Cut/Styling"></a></div>
+    <div class="popular"> <p align="center">Nails</p> <a target="_blank" href="/appointment"><img  class="popular-img"  src="images/nail.jpeg" alt="Nails"></a></div>
+    <div class="popular"> <p align="center">Hair Color</p><a target="_blank" href="/appointment"><img class="popular-img" src="images/haircolor.jpeg" alt="Hair Color"> </a></div>
+    <div class="popular"> <p align="center">Facial</p> <a target="_blank" href="/appointment"><img src="images/facial.jpeg" alt="Facial"></a></div>
+   </div>
+</div>
+<div class="row popular-block">
+    <div class="popular"> <p align="center">Party Makeup</p> <a target="_blank" href="/appointment"><img src="images/pmakeup.jpeg" alt="Party MakeUp"></a></div>
+    <div class="popular"> <p align="center">Spa & Message</p> <a target="_blank" href="/appointment"><img  class="popular-img"  src="images/message.jpeg" alt="Spa & Message"></a></div>
+    <div class="popular"> <p align="center">Keratine Treatment</p><a target="_blank" href="/appointment"><img  class="popular-img"  src="images/keratine.jpeg" alt="Keratine Treatment"> </a></div>
+    <div class="popular"> <p align="center">Bridal MakeUp</p> <a target="_blank" href="/appointment"><img  class="popular-img"  src="images/bridal.jpeg" alt="Bridal MakeUp"></a></div>
+</div>
+</body>
+</html>
