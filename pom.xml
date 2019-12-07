@@ -63,12 +63,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sourceforge.nekohtml</groupId>
-			<artifactId>nekohtml</artifactId>
-			<version>1.9.21</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>zxcvbn</artifactId>
 			<version>4.3.0</version>
