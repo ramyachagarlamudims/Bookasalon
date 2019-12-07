@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<nav align="right">
+    <a href="/register">SignUp</a>
+    <a href="/login">SignIn</a>
+    <a href="/appointment">BookAppointment</a>
+</nav>
+<div id="searchform">
+    <form>
+        <input type="text" id="location" name="location" PLACEHOLDER="Enter Your Location" size="50">
+        <input type="button" id="search" name="searchsalon" value="Search Near Salons">
+    </form>
+</div>
 <div class="register">
     <form autocomplete="off" class="form-col" action="#" th:action="@{/register}" th:object="${user}" method="POST" role="form" data-toggle="validator">
         <label class="subtitle">New User SignUp</label>

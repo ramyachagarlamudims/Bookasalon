@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<nav align="right">
+    <a href="/register">SignUp</a>
+    <a href="/login">SignIn</a>
+    <a href="/appointment">BookAppointment</a>
+</nav>
+<div id="searchform">
+    <form>
+        <input type="text" id="location" name="location" PLACEHOLDER="Enter Your Location" size="50">
+        <input type="button" id="search" name="searchsalon" value="Search Near Salons">
+    </form>
+</div>
 <div class="login">
 <form class="form-col" action="/login" method="POST">
     <label class="subtitle">SignIn </label>
@@ -29,7 +40,7 @@
             <input type="password" class="form-control" name="password" minlength="5" maxlength="40" required placeholder="Password">
         </div>
     </div>
-    <div class="form-group row">
+    <div class="form-group row 10">
         <a href="/forgotpassword" class="col-4 col-form-label">Forgot Password </a>
     </div>
     <div align="center">

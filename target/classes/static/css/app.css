@@ -54,7 +54,7 @@ a{
   display:block;
   padding:50px;
   background:#F9F5F5;
-  margin-top:150px;
+  margin-top:120px;
   margin-left: 30%;
   margin-right: 30%;
  }
@@ -62,7 +62,7 @@ a{
   display:block;
   padding:50px;
   background:#F9F5F5;
-   margin-top:150px;
+   margin-top:120px;
    margin-left: 30%;
    margin-right: 30%;
  }
@@ -70,7 +70,7 @@ a{
   display:block;
   padding:50px;
   background:#F9F5F5;
-   margin-top:50px;
+   margin-top:30px;
    margin-left: 30%;
    margin-right: 35%;
  }
@@ -85,6 +85,29 @@ a{
 }
 .row {
     margin-left: 10%;
+}
+.row-appointment{
+    margin-left: 15%;
+     margin-right: 15%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-top:50px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+.column-appointment {
+  float: left;
+  width: 50%;
+  height:250px;
+  padding:2px;
 }
 .popular{
   padding:10px;
@@ -128,6 +151,13 @@ p{
   font-size: 20px;
   font-variant: small-caps;
   color: #1b1b2cd3;
+  font-stretch: wider;
+}
+.appointment{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-variant: small-caps;
+  color:white;
   font-stretch: wider;
 }
 
