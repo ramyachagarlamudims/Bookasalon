@@ -1,27 +1,27 @@
 package com.bookasalon.appointments.Services;
-import com.bookasalon.appointments.Models.User;
-import com.bookasalon.appointments.Repositories.UserRepository;
+import com.bookasalon.appointments.Models.UserData;
+import com.bookasalon.appointments.Repositories.UserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("userService")
 public class UserService {
-    private UserRepository userRepository;
+    private UserDataRepository userDataRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserService(UserDataRepository userDataRepository) {
+        this.userDataRepository = userDataRepository;
     }
-    public User findByEmail(String email) {
-        return userRepository.findByEmail(email);
+    public UserData findByEmail(String email) {
+        return userDataRepository.findByEmail(email);
     }
 
-//    public User findByConfirmationToken(String confirmationToken) {
-//     //   return userRepository.findByConfirmationToken(confirmationToken);
+//    public UserData findByConfirmationToken(String confirmationToken) {
+//     //   return userDataRepository.findByConfirmationToken(confirmationToken);
 //    }
 
-    public void saveUser(User user) {
-        userRepository.save(user);
+    public void saveUser(UserData userData) {
+        userDataRepository.save(userData);
     }
 
 }

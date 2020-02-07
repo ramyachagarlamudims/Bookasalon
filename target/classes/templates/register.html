@@ -24,8 +24,8 @@
     </form>
 </div>
 <div class="register">
-    <form autocomplete="off" class="form-col" action="#" th:action="@{/register}" th:object="${user}" method="POST" role="form" data-toggle="validator">
-        <label class="subtitle">New User SignUp</label>
+    <form autocomplete="off" class="form-col" action="#" th:action="@{/register}" th:object="${userData}" method="POST" role="form" data-toggle="validator">
+        <label class="subtitle">New UserData SignUp</label>
         <div th:if="${confirmationMessage}" class="alert alert-success"
              role="alert" th:text=${confirmationMessage}></div>
 

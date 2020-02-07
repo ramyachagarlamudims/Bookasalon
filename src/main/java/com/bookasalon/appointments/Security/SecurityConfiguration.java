@@ -10,11 +10,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-        http
+        http.csrf().disable()
                 .authorizeRequests()
-                .anyRequest()
-                .permitAll(); //allows granting access to all users for all URLs
+                .antMatchers("/", "/home", "/login","/register").permitAll()
+                .anyRequest().permitAll();
     }
 
 }

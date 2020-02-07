@@ -13,6 +13,10 @@
   justify-content: center;
   padding: 15px;
 }
+.logo{
+position:left;
+  margin-left:10%;
+}
 #location
 {
   color:gray;
@@ -41,8 +45,7 @@ a{
   color:Black;
   font-family: 'Times New Roman', Times, serif;
  }
-.btnsubmit
-{
+.btnsubmit{
   height: 40px;
   padding: 10px;
   color:black;
@@ -79,12 +82,12 @@ a{
   block-size:250px;
   padding:10 px;
   margin-top:10px;
-  margin-left:1.5%;
+  margin-left:2%;
   margin-right:1.5%;
   margin-bottom:5%;
 }
 .row {
-    margin-left: 10%;
+    margin-left: 20%;
 }
 .row-appointment{
     margin-left: 15%;
@@ -112,7 +115,6 @@ a{
 .popular{
   padding:10px;
   background:#F9F5F5;
-  margin-left:2%;
   margin-top:5px;
   margin-bottom:1.5%;
 }

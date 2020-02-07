@@ -1,9 +1,8 @@
 package com.bookasalon.appointments.Controllers;
-import com.bookasalon.appointments.Models.User;
+import com.bookasalon.appointments.Models.UserData;
 import com.bookasalon.appointments.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,21 +17,21 @@ public class LoginController {
     UserService userService;
 
     @GetMapping("/login")
-    public String loginPage(Model model) {
-        return "login";
+    public  ModelAndView loginPage(ModelAndView modelAndView){
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
 
     @PostMapping("/login")
-    public ModelAndView loginsubmit(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult, HttpServletRequest request) {
-        // Lookup user in database by e-mail
-        User userExists = userService.findByEmail(user.getEmail());
-        System.out.println(userExists);
-        if (userExists != null){
-            modelAndView.addObject("username",userExists.getFullname());
-            modelAndView.setViewName("home");
-        } else {
-            modelAndView.addObject("Not a Registered User", "Oops! Please register to login");
+    public ModelAndView loginsubmit(ModelAndView modelAndView, @Valid UserData userData, BindingResult bindingResult, HttpServletRequest request) {
+        UserData userDataExists = userService.findByEmail(userData.getEmail());
+        System.out.println(userDataExists);
+        if (userDataExists == null){
+            modelAndView.addObject("Not a Registered UserData", "Oops! Please register to login");
             modelAndView.setViewName("register");
+        } else {
+            modelAndView.addObject("username", userDataExists.getFullname());
+            modelAndView.setViewName("home");
         }
         return modelAndView;
     }

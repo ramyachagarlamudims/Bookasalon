@@ -4,8 +4,8 @@ import javax.validation.constraints.*;
 import java.util.Set;
 
 @Entity
-@Table(name="user")
-public class User {
+@Table(name="userdata")
+public class UserData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
